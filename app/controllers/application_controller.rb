@@ -7,13 +7,14 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret"
   end
   get '/' do
-    erb :index
+  
   end
+  
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
   end
-  
+
   get '/new' do
     erb :new
   end
